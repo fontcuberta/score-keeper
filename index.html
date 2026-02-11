@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Score Keeper</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-root">
+      <section class="score-card">
+        <header class="score-header">
+          <h1 class="score-title">Score Keeper</h1>
+          <div class="global-controls">
+            <div class="increment-control" role="group" aria-label="Point increment">
+              <span class="increment-label">Points per click:</span>
+              <div class="increment-buttons">
+                <button class="increment-btn" data-increment="1" type="button">1</button>
+                <button class="increment-btn" data-increment="2" type="button">2</button>
+                <button class="increment-btn" data-increment="3" type="button">3</button>
+              </div>
+              <label class="increment-custom">
+                <span class="visually-hidden">Custom point value (1–99)</span>
+                <input
+                  type="number"
+                  min="1"
+                  max="99"
+                  step="1"
+                  inputmode="numeric"
+                  value="1"
+                  id="customIncrement"
+                  class="field__input increment-input"
+                  aria-label="Custom point value (1 to 99)"
+                  placeholder="1–99"
+                />
+              </label>
+            </div>
+            <button class="btn btn--secondary" id="resetAllButton" type="button">Reset All</button>
+          </div>
+        </header>
+
+        <div class="teams-grid">
+          <article class="team-section team-section--a" data-team="a">
+            <label class="team-name-label">
+              <span class="visually-hidden">Team A name</span>
+              <input
+                type="text"
+                id="teamAName"
+                class="team-name-input"
+                value="Team A"
+                maxlength="24"
+                aria-label="Team A name"
+              />
+            </label>
+            <div class="score-display" aria-live="polite">
+              <span class="score-display__value" id="scoreADisplay">0</span>
+            </div>
+            <div class="team-controls">
+              <button class="btn btn--primary btn--add" id="addAButton" type="button" aria-label="Add points to Team A">+</button>
+              <button class="btn" id="resetAButton" type="button">Reset</button>
+            </div>
+          </article>
+
+          <article class="team-section team-section--b" data-team="b">
+            <label class="team-name-label">
+              <span class="visually-hidden">Team B name</span>
+              <input
+                type="text"
+                id="teamBName"
+                class="team-name-input"
+                value="Team B"
+                maxlength="24"
+                aria-label="Team B name"
+              />
+            </label>
+            <div class="score-display" aria-live="polite">
+              <span class="score-display__value" id="scoreBDisplay">0</span>
+            </div>
+            <div class="team-controls">
+              <button class="btn btn--primary btn--add" id="addBButton" type="button" aria-label="Add points to Team B">+</button>
+              <button class="btn" id="resetBButton" type="button">Reset</button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
