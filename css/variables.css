@@ -1,0 +1,204 @@
+/**
+ * my-first-app – Color Palette
+ * Brand: Blue, Teal, Yellow, White
+ * Normalized palettes: Blue, Teal, Yellow, Gray, Red, Purple (0–950)
+ */
+
+:root {
+  /* Brand colors */
+  --brand-blue: #2563eb;
+  --brand-teal: #22d3ee;
+  --brand-yellow: #facc15;
+  --brand-white: #ffffff;
+
+  /* Blue palette */
+  --blue-0: #eff6ff;
+  --blue-50: #dbeafe;
+  --blue-100: #bfdbfe;
+  --blue-200: #93c5fd;
+  --blue-300: #60a5fa;
+  --blue-400: #38bdf8;
+  --blue-500: #0ea5e9;
+  --blue-600: #2563eb;
+  --blue-700: #0369a1;
+  --blue-800: #075985;
+  --blue-900: #0c4a6e;
+  --blue-950: #082f49;
+
+  /* Teal palette */
+  --teal-0: #f0fdfa;
+  --teal-50: #ccfbf1;
+  --teal-100: #99f6e4;
+  --teal-200: #5eead4;
+  --teal-300: #2dd4bf;
+  --teal-400: #22d3ee;
+  --teal-500: #14b8a6;
+  --teal-600: #0d9488;
+  --teal-700: #0f766e;
+  --teal-800: #115e59;
+  --teal-900: #134e4a;
+  --teal-950: #042f2e;
+
+  /* Yellow palette */
+  --yellow-0: #fefce8;
+  --yellow-50: #fef9c3;
+  --yellow-100: #fef08a;
+  --yellow-200: #fde047;
+  --yellow-300: #facc15;
+  --yellow-400: #eab308;
+  --yellow-500: #ca8a04;
+  --yellow-600: #a16207;
+  --yellow-700: #854d0e;
+  --yellow-800: #713f12;
+  --yellow-900: #422006;
+  --yellow-950: #271f06;
+
+  /* Gray palette */
+  --gray-0: #ffffff;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #0f172a;
+  --gray-950: #020617;
+
+  /* Red palette */
+  --red-0: #fef2f2;
+  --red-50: #fef2f2;
+  --red-100: #fee2e2;
+  --red-200: #fecaca;
+  --red-300: #fca5a5;
+  --red-400: #f87171;
+  --red-500: #ef4444;
+  --red-600: #dc2626;
+  --red-700: #b91c1c;
+  --red-800: #991b1b;
+  --red-900: #7f1d1d;
+  --red-950: #450a0a;
+
+  /* Purple palette */
+  --purple-0: #faf5ff;
+  --purple-50: #f3e8ff;
+  --purple-100: #e9d5ff;
+  --purple-200: #d8b4fe;
+  --purple-300: #c084fc;
+  --purple-400: #a855f7;
+  --purple-500: #9333ea;
+  --purple-600: #7c3aed;
+  --purple-700: #6d28d9;
+  --purple-800: #5b21b6;
+  --purple-900: #4c1d95;
+  --purple-950: #2e1065;
+
+  /* Semantic tokens – used by score keeper */
+  --color-bg-gradient-start: var(--blue-600);
+  --color-bg-gradient-mid: var(--teal-400);
+  --color-bg-gradient-end: var(--gray-950);
+
+  --color-surface: 15, 23, 42;
+  --color-surface-opacity: 0.92;
+  --color-surface-muted: 15, 23, 42;
+  --color-surface-muted-opacity: 0.5;
+
+  --color-text-primary: var(--gray-200);
+  --color-text-muted: var(--gray-400);
+  --color-text-placeholder: #64748b;
+
+  --color-border: 148, 163, 184;
+
+  --color-accent-primary: var(--blue-600);
+  --color-accent-secondary: var(--teal-400);
+  --color-accent-focus: 56, 189, 248;
+  --color-accent-highlight: var(--yellow-400);
+
+  /* Team colors (score keeper) */
+  --color-team-a: 34, 211, 238; /* teal-400 #22d3ee */
+  --color-team-b: 234, 179, 8; /* yellow-400 #eab308 */
+}
+
+/* Theme: Warm – amber and red tones */
+[data-theme="warm"] {
+  --color-bg-gradient-start: var(--yellow-700);
+  --color-bg-gradient-mid: var(--red-500);
+  --color-bg-gradient-end: var(--gray-950);
+  --color-accent-primary: var(--yellow-600);
+  --color-accent-secondary: var(--red-500);
+  --color-accent-focus: 251, 146, 60;
+  --color-accent-highlight: var(--yellow-300);
+  --color-team-a: 251, 191, 36; /* amber */
+  --color-team-b: 239, 68, 68; /* red-500 */
+}
+
+/* Theme: Ocean – deep blue and teal */
+[data-theme="ocean"] {
+  --color-bg-gradient-start: var(--blue-800);
+  --color-bg-gradient-mid: var(--teal-600);
+  --color-bg-gradient-end: var(--gray-950);
+  --color-accent-primary: var(--blue-500);
+  --color-accent-secondary: var(--teal-500);
+  --color-accent-focus: 34, 211, 238;
+  --color-accent-highlight: var(--teal-300);
+  --color-team-a: 34, 211, 238; /* teal-400 */
+  --color-team-b: 20, 184, 166; /* teal-500 */
+}
+
+/* Theme: Sunset – purple and pink */
+[data-theme="sunset"] {
+  --color-bg-gradient-start: var(--purple-700);
+  --color-bg-gradient-mid: var(--red-500);
+  --color-bg-gradient-end: var(--gray-950);
+  --color-accent-primary: var(--purple-500);
+  --color-accent-secondary: var(--red-400);
+  --color-accent-focus: 192, 132, 252;
+  --color-accent-highlight: var(--purple-300);
+  --color-team-a: 168, 85, 247; /* purple-400 */
+  --color-team-b: 248, 113, 113; /* red-400 */
+}
+
+/* Theme switcher – compact color swatch buttons */
+.theme-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.theme-switcher__label {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.theme-switcher__buttons {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.theme-btn {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  border: 2px solid rgba(var(--color-border), 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 80ms ease, box-shadow 150ms ease;
+}
+
+.theme-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.theme-btn--active {
+  border-color: var(--color-text-primary);
+  box-shadow: 0 0 0 1px var(--color-text-primary);
+}
+
+/* Each theme swatch color */
+.theme-btn[data-theme="default"] { background: linear-gradient(135deg, #2563eb, #22d3ee); }
+.theme-btn[data-theme="warm"] { background: linear-gradient(135deg, #854d0e, #ef4444); }
+.theme-btn[data-theme="ocean"] { background: linear-gradient(135deg, #075985, #0d9488); }
+.theme-btn[data-theme="sunset"] { background: linear-gradient(135deg, #6d28d9, #ef4444); }
