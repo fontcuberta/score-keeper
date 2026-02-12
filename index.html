@@ -4,13 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Score Keeper</title>
+    <script>
+      try {
+        var t = localStorage.getItem("my-first-app-theme");
+        if (t && ["warm","ocean","sunset"].includes(t))
+          document.documentElement.setAttribute("data-theme", t);
+      } catch (_) {}
+    </script>
+    <link rel="stylesheet" href="../css/variables.css" />
     <link rel="stylesheet" href="style.css" />
+    <script src="../js/theme.js" defer></script>
   </head>
   <body>
     <main class="app-root">
       <section class="score-card">
         <header class="score-header">
-          <h1 class="score-title">Score Keeper</h1>
+          <div class="score-header__top">
+            <h1 class="score-title">Score Keeper</h1>
+            <div class="theme-switcher">
+              <span class="theme-switcher__label" aria-hidden="true">Theme</span>
+              <div id="themeSwitcher" class="theme-switcher__buttons" role="group" aria-label="Choose color theme"></div>
+            </div>
+          </div>
           <div class="global-controls">
             <div class="increment-control" role="group" aria-label="Point increment">
               <span class="increment-label">Points per click:</span>
